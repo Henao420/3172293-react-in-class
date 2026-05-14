@@ -6,5 +6,4 @@ export default function App() {
       </h1>
     </div>
   );
-} 
-
+}
