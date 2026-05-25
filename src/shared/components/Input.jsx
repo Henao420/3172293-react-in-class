@@ -32,7 +32,6 @@ export default function Input({
             >
 
                 {/* Area interactiva invisivle (48px) */}
-
             <div
                 className="
                     absolute

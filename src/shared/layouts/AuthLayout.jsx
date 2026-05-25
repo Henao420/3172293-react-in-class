@@ -14,10 +14,11 @@ export default function AuthLayout() {
                 }}
             >
                 <main className="mx-auto">
-                        <input
+                        <Input
                             label="Nombre"
                             type="text"
                             placeholder="Ingrese su nombre"
+                            htmlFor="Campo de nombre"
                         />
                         <h1>Yo soy Auth</h1>
                     <Outlet />
