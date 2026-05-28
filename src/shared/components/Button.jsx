@@ -8,7 +8,7 @@ export default function Button({
 }) {
 
     const variants = {
-        primary: "bg-brand text-inverse hover:bg-brand-hover",
+        primary: "bg-brand text-text-inverse hover:bg-brand-hover",
         secondary: "bg-brand-soft text-primary hover:bg-brand-soft-hover"
     };
 
@@ -17,7 +17,7 @@ export default function Button({
             h-8
             px-4
             before:absolute before:content-['']
-            before:-inset-y-[9px] before:-inset-x-[0px]
+            before:-inset-y-[8px] before:-inset-x-[0px]
             `,
         md: "h-10 px-4 before:absolute before:content-['']                  before:-inset-y-[4px] before:-inset-x-[0px] "
     }

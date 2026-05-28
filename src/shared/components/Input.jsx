@@ -11,6 +11,7 @@ export default function Input({
             // Estos valores deben ser con variables
         primary: `
             border-brand
+            bg-gray-100
         `,
         secondary: `
             border-red-950
@@ -46,15 +47,15 @@ export default function Input({
                     text-caption
                     text-secondary
                     ${
-                        size === "sm"
-                            ? "-mb-2"
-                            : size === "md"
-                                ? "mb-0"
-                                : "mb-1"
+                      size === "sm"
+                        ? "-mb-2"
+                        : size === "md"
+                            ? "mb-0"
+                            : "mb-1"
                     }
                 `}
             >
-                {label}
+            {label}
             </label>
 
                 {/* Contenedor del input */}
@@ -89,7 +90,6 @@ export default function Input({
                 className={`
                     relative
                     w-full
-                    h-10
                     rounded-md
                     border
                     px-4

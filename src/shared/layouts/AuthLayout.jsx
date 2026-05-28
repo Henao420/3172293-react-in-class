@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import authBg from "@/assets/images/bg-1.png";
-import { Input } from "@/shared";
-import { Button } from "@/shared";
+import { Input, Button } from "@/shared";
+import DeleteCounter2 from "../components/DeleteCounter2";
+import EffectDemo from "../components/EffectDemo";
 
 export default function AuthLayout() {
     return (
@@ -21,35 +22,31 @@ export default function AuthLayout() {
                             placeholder="Ingrese su nombre"
                             htmlFor="user-name"
                             variant="primary"
-                            size="md"
+                            size="lg"
                         />
                         <Input
                             label="Correo"
                             type="email"
                             placeholder="Ingrese su correo"
                             htmlFor="user-email"
-                            size="md"
                         />
                         <Input
                             label="Teléfono"
                             type="tel"
-                            placeholder="Ingrese su numero de teléfono"
+                            placeholder="Ingres e su numero de teléfono"
                             htmlFor="user-phone"
-                            size="md"
                         />
                         <Input
                             label="Tipo de Documento"
                             type="text"
                             placeholder="Ingrese su nombre"
                             htmlFor="name"
-                            size="md"
                         />
                         <Input
                             label="Documento"
                             type="text"
                             placeholder="Ingrese su numero de documento"
                             htmlFor="user-document-number"
-                            size="md"
                         />
 
                             {/* Actions */}
@@ -70,8 +67,16 @@ export default function AuthLayout() {
                             >
                                 Guardar
                             </Button>
+                        </div>{/* Actions */}
+
+                        {/* Implementacion del estado useState */}
+                        <div className="mt-10">
+                            <h1>Ejemplo useState</h1>
+                            <DeleteCounter2 />
                         </div>
-                        <h1>Yo soy Auth</h1>
+
+                        <EffectDemo />
+
                     <Outlet />
                 </main>
             </div>
