@@ -1,14 +1,28 @@
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import authBg from "@/assets/images/bg-1.png";
-import { Input, Button } from "@/shared";
-import DeleteCounter2 from "../components/DeleteCounter2";
-import EffectDemo from "../components/EffectDemo";
+import { 
+    Input, 
+    Button, 
+    DeleteCounter2,
+    Select,
+    Checkbox } from "@/shared";
+import { getDocumentTypes } from "../../services/selectService.js";
 
 export default function AuthLayout() {
+
+    // Estado para los tipos de documento
+    const [documentTypes, setDocumentTypes] = useState([])
+
+    // Uso del estado useEffect
+    useEffect(() => {
+        getDocumentTypes().then(setDocumentTypes);
+    }, [])
+
     return (
         <>
             <div 
-                className="min-h-screen w-full"
+                className="min-h-screen w-full my-0 mx-auto"
                 style={{
                     backgroundImage: `url(${authBg})`,
                     backgroundSize: "cover",
@@ -69,13 +83,26 @@ export default function AuthLayout() {
                             </Button>
                         </div>{/* Actions */}
 
-                        {/* Implementacion del estado useState */}
+                            {/* Implementacion del estado useState */}
                         <div className="mt-10">
-                            <h1>Ejemplo useState</h1>
+                            <h1>Ejemplo sin useState</h1>
                             <DeleteCounter2 />
                         </div>
 
-                        <EffectDemo />
+                            {/* Implementacion del estado useEffect
+                        <div className="mt-12">
+                            <h1>Este es mi useEffect</h1>
+                            <EffectDemo />
+                        </div> */}
+
+                        {/* <CounterEffect /> */}
+
+                        <Select
+                            label="Tipos de documento"
+                            name="userDocumentTypes"
+                            htmlFor="userDocumentTypes"
+                            options={documentTypes}
+                        />
 
                     <Outlet />
                 </main>
