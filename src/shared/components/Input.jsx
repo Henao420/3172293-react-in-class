@@ -1,5 +1,6 @@
 export default function Input({
     label,
+    error,
     htmlFor,
     type = "text",
     variant = "primary",
@@ -11,7 +12,7 @@ export default function Input({
             // Estos valores deben ser con variables
         primary: `
             border-brand
-            bg-gray-100
+            bg-background
         `,
         secondary: `
             border-red-950
@@ -37,7 +38,6 @@ export default function Input({
 
     return(
         <div className="w-80">
-
                 {/* Label */}
             <label 
                 // htmlFor con kebab-case
@@ -53,11 +53,11 @@ export default function Input({
                             ? "mb-0"
                             : "mb-1"
                     }
+                    ${error ? "border-red-800" : "text-caption"}
                 `}
             >
             {label}
             </label>
-
                 {/* Contenedor del input */}
             <div
                 className="
@@ -67,7 +67,6 @@ export default function Input({
                     items-center
                 "
             >
-
                 {/* Area interactiva invisivle (48px) */}
             <div
                 className="
@@ -82,11 +81,11 @@ export default function Input({
                     e.currentTarget.nextSibling.focus()
                 }}
             />
-
                 {/* Input visual */}
             <input
                 id={htmlFor}
                 type={type}
+                error={error}
                 className={`
                     relative
                     w-full
@@ -101,12 +100,15 @@ export default function Input({
                     focus:ring-brand
                     ${variants[variant]}
                     ${sizes[size]}
+                    ${error ? "border-red-800" : "border border-border"}
                 `}
                 {...props}
             />
-
             </div>
-
+            {/* Feedback */}
+            {error && (
+                <p className="text-caption text-red-800 place-self-start">{error}</p>
+            )}
         </div>
-    )
+    );
 }

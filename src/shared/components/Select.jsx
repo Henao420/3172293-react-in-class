@@ -2,8 +2,11 @@
 
 export default function Select({
     label,
+    error,
     htmlFor,
     name,
+    onChange,
+    value,
     options = [],
 }){
     return (
@@ -24,6 +27,8 @@ export default function Select({
             {/* Select */}
             <select
                 name={name}
+                onChange={onChange}
+                value={value}
                 id="htmlFor"
                 className="
                     w-80
@@ -44,8 +49,10 @@ export default function Select({
                         {opt.label}
                     </option>
                 ))}
-                
             </select>
+            {error && (
+                <p className="text-caption text-red-800 place-self-start mt-1">{error}</p>
+            )}
         </div>
     )
 }

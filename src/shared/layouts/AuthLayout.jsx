@@ -4,7 +4,7 @@ import authBg from "@/assets/images/bg-1.png";
 import { 
     Input, 
     Button, 
-    DeleteCounter2,
+    // DeleteCounter2,
     Select,
     Checkbox } from "@/shared";
 import { getDocumentTypes } from "../../services/selectService.js";
@@ -22,7 +22,7 @@ export default function AuthLayout() {
     return (
         <>
             <div 
-                className="min-h-screen w-full my-0 mx-auto"
+                className="min-h-screen w-full"
                 style={{
                     backgroundImage: `url(${authBg})`,
                     backgroundSize: "cover",
@@ -53,7 +53,7 @@ export default function AuthLayout() {
                         <Input
                             label="Tipo de Documento"
                             type="text"
-                            placeholder="Ingrese su nombre"
+                            placeholder="Ingrese su tipo de documento"
                             htmlFor="name"
                         />
                         <Input
@@ -64,7 +64,7 @@ export default function AuthLayout() {
                         />
 
                             {/* Actions */}
-                        <div className="flex gap-6 items-center">
+                        <div className="flex gap-6 items-center mt-2">
                             <Button
                                 variant="secondary"
                                 size="sm"
@@ -84,10 +84,10 @@ export default function AuthLayout() {
                         </div>{/* Actions */}
 
                             {/* Implementacion del estado useState */}
-                        <div className="mt-10">
+                        {/* <div className="mt-10">
                             <h1>Ejemplo sin useState</h1>
                             <DeleteCounter2 />
-                        </div>
+                        </div> */}
 
                             {/* Implementacion del estado useEffect
                         <div className="mt-12">
@@ -103,6 +103,8 @@ export default function AuthLayout() {
                             htmlFor="userDocumentTypes"
                             options={documentTypes}
                         />
+
+                        <Checkbox/>
 
                     <Outlet />
                 </main>

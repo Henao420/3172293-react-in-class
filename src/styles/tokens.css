@@ -60,9 +60,9 @@
 
 
 /*Font-weight crudos*/
-    --font-wight-light: 300;
-    --font-wight-regular: 400;
-    --font-wight-bold: 700
+    --font-weight-light: 200;
+    --font-weight-regular: 400;
+    --font-weight-bold: 800;
 
 /*Font-size*/
     --fs-xxxxl: 5rem; /*Ultra grande*/
