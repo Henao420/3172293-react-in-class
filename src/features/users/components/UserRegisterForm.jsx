@@ -33,8 +33,8 @@ export default function UserRegisterForm() {
     //         Handle Generico
     // ==================================
     /**
-     * Funcion que se ejecuta cada vez que cambia el valor de un input del formulario
-     */
+    * Funcion que se ejecuta cada vez que cambia el valor de un input del formulario
+    */
 
     const handleChange = (e) => {
         // Se obtiene el nombre del campo y su valor
