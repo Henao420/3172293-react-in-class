@@ -11,4 +11,8 @@ export { default as EffectDemo } from "./components/EffectDemo";
 export { default as CounterEffect } from "./components/CounterEffect";
 export { default as Select } from "./components/Select";
 export { default as Checkbox } from "./components/Checkbox";
-export { default as IconButton } from "./components/IconButton";
+export { IconButton } from "./components/IconButton";
+export { default as SearchField } from "./components/SearchField";
+
+// Layout Components
+export { default as Navbar } from "./layouts/Navbar";

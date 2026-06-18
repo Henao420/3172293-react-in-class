@@ -2,8 +2,9 @@
 import { useState, useEffect } from "react"
 import { Input, Select, Checkbox, Button } from "@/shared"
 import { getDocumentTypes } from "@/services/selectService"
-// import { useNavigate } from "react-router-dom";
 import { userSchema } from "../schemas/userSchema";
+import { User, Pencil } from "lucide-react";
+// import { useNavigate } from "react-router-dom";
 
 export default function UserRegisterForm() {
 
@@ -255,6 +256,9 @@ export default function UserRegisterForm() {
                         Guardar
                     </Button>
                 </div>
+                {/* Icon */}
+                <User />
+                <Pencil />
             </form>
         </div>
     )
