@@ -212,7 +212,6 @@ export default function UserRegisterForm() {
                 />
 
                     {/* Checkbox */}
-
                 <div className="grid gap-4 my-8">
                     <Checkbox
                         id="isSuperUser"
@@ -220,22 +219,21 @@ export default function UserRegisterForm() {
                         label="Es super usuario"
                         checked={formData.isSuperUser}
                         onChange={handleChange}
-                />
+                    />
                     <Checkbox
                         id="isStaff"
                         name="isStaff"
                         label="Es staff"
                         checked={formData.isStaff}
                         onChange={handleChange}
-                />
+                    />
                     <Checkbox
                         id="isActive"
                         name="isActive"
                         label="Esta Activo"
                         checked={formData.isActive}
                         onChange={handleChange}
-                />
-
+                    />
                 </div>          
 
                     {/* Actions */}
@@ -257,10 +255,7 @@ export default function UserRegisterForm() {
                         Guardar
                     </Button>
                 </div>
-                {/* Actions */}
             </form>
-            
         </div>
     )
-
 }
