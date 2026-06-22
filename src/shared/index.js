@@ -13,6 +13,12 @@ export { default as Select } from "./components/Select";
 export { default as Checkbox } from "./components/Checkbox";
 export { IconButton } from "./components/IconButton";
 export { default as SearchField } from "./components/SearchField";
+export { 
+    Dropdown,
+    DropdownTrigger,
+    DropdownItem,
+    DropdownContent,
+} from "./components/Dropdown";
 
 // Layout Components
 export { default as Navbar } from "./layouts/Navbar";

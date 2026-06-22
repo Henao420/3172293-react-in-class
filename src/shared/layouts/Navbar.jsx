@@ -1,23 +1,24 @@
 import { useState } from "react";
-import { User } from "lucide-react";
+import { Menu } from "lucide-react";
 import {
-  IconButton,
   SearchField,
+  IconButton,
+  Dropdown,
+  DropdownTrigger,
+  DropdownContent,
+  DropdownItem,
 } from "@/shared";
 import  logo  from "@/assets/images/1-logo.png";
 import { Link } from "react-router-dom";
 
 
 export default function Navbar(){
-
-  // Componente de búsqueda 😂😂😂
+  // Componente de búsqueda 😂
   const [search, setSearch] = useState("");
-
 
   const handleSearch = (value) => {
     console.log("Buscar:", value);
   };
-
 
   const handleClear = () => {
     console.log("Campo limpiado");
@@ -74,6 +75,29 @@ export default function Navbar(){
                     className="w-76"
                 />
 
+                {/* ====== DROPDOWN ======*/}
+              <Dropdown>
+                <div className="p-10">
+                  <DropdownTrigger>
+                    <IconButton ariaLabel="Menu de usuario">
+                      <Menu />
+                    </IconButton>
+                  </DropdownTrigger>
+
+                  {/* Contenido */}
+                  <DropdownContent>
+                    <DropdownItem>
+                      Gestion de productos
+                    </DropdownItem>
+                    <DropdownItem>
+                      Gestion de usuarios
+                    </DropdownItem>
+                    <DropdownItem>
+                      Cerrar sesion
+                    </DropdownItem>
+                  </DropdownContent>
+                </div>
+              </Dropdown>
             </div>
             <IconButton />
           </div>
