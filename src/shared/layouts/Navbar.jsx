@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import {
-  SearchField,
   IconButton,
   Dropdown,
   DropdownTrigger,
   DropdownContent,
   DropdownItem,
+  SearchField,
 } from "@/shared";
-import  logo  from "@/assets/images/1-logo.png";
+import logo from "@/assets/images/1-logo.png";
 import { Link } from "react-router-dom";
 
 
-export default function Navbar(){
+export default function Navbar() {
   // Componente de búsqueda 😂
   const [search, setSearch] = useState("");
 
@@ -30,7 +30,7 @@ export default function Navbar(){
           <div className="flex h-16 items-center justify-between">
             {/* Logo de marca */}
             <div className=" hidden sm:block items-center">
-              <Link to={"/dashboard/home"} className="text-h1 font-heading">
+              <Link to={"/dashboard"} className="text-h1 font-heading">
                 <img src={logo} alt="logo" className="h-12" />
               </Link>
             </div>
@@ -76,8 +76,8 @@ export default function Navbar(){
                 />
 
                 {/* ====== DROPDOWN ======*/}
+            </div>
               <Dropdown>
-                <div className="p-10">
                   <DropdownTrigger>
                     <IconButton ariaLabel="Menu de usuario">
                       <Menu />
@@ -90,16 +90,22 @@ export default function Navbar(){
                       Gestion de productos
                     </DropdownItem>
                     <DropdownItem>
-                      Gestion de usuarios
+                      <Link
+                        to="/dashboard/userCreate"
+                        className="block w-full"
+                      >
+                        Crear Usuario
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link to="/dashboard/userList" className="block w-full">Listar usuarios
+                      </Link>
                     </DropdownItem>
                     <DropdownItem>
                       Cerrar sesion
                     </DropdownItem>
                   </DropdownContent>
-                </div>
               </Dropdown>
-            </div>
-            <IconButton />
           </div>
         </div>
       </nav>

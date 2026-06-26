@@ -39,6 +39,7 @@ export function Dropdown({
         }
 
         document.addEventListener("mousedown", handleClickOutside)
+        return () => document.removeEventListener("mousedown", handleClickOutside)
     }, [])
 
     // Escape key
@@ -77,7 +78,7 @@ export function DropdownTrigger({ children }) {
 }
 
 // Context
-export function DropdownContext({ children, className = "" }) {
+export function DropdownContent({ children, className = "" }) {
     const { open } = useContext(DropdownContext)
 
     if (!open) return null
@@ -95,7 +96,7 @@ export function DropdownContext({ children, className = "" }) {
                 dark:bg-neutral-950/80
                 backdrop-blur-[1px]
                 shadow-lg
-                rounded-2x1
+                rounded-2xl
                 overflow-hidden
                 hover:shadow-black
                 transition-shadow duration-700

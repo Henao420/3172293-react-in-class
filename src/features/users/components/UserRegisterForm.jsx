@@ -3,7 +3,8 @@ import { useState, useEffect } from "react"
 import { Input, Select, Checkbox, Button } from "@/shared"
 import { getDocumentTypes } from "@/services/selectService"
 import { userSchema } from "../schemas/userSchema";
-import { User, Pencil } from "lucide-react";
+import { Link } from "react-router-dom";
+// import { User, Pencil } from "lucide-react";
 // import { useNavigate } from "react-router-dom";
 
 export default function UserRegisterForm() {
@@ -239,14 +240,15 @@ export default function UserRegisterForm() {
 
                     {/* Actions */}
                 <div className="flex gap-6 items-center">
-                    <Button
-                        variant="secondary"
-                        size="sm"
-                        type="submit"
-                        onClick={() => console.log("Se oprimio el cancelar")}
-                    >
-                        Cancelar
-                    </Button>
+                    <Link to="/dashboard/userList">
+                        <Button
+                            variant="secondary"
+                            size="sm"
+                            type="submit"
+                        >
+                            Cancelar
+                        </Button>
+                    </Link>
                     <Button
                         variant="primary"
                         size="md"
@@ -257,8 +259,8 @@ export default function UserRegisterForm() {
                     </Button>
                 </div>
                 {/* Icon */}
-                <User />
-                <Pencil />
+                {/* <User />
+                <Pencil /> */}
             </form>
         </div>
     )

@@ -60,9 +60,9 @@
 
 
 /*Font-weight crudos*/
-    --font-weight-light: 200;
+    --font-weight-light: 300;
     --font-weight-regular: 400;
-    --font-weight-bold: 800;
+    --font-weight-bold: 700;
 
 /*Font-size*/
     --fs-xxxxl: 5rem; /*Ultra grande*/
@@ -76,20 +76,4 @@
     --fs-xxs: 0.875rem; /*Texto de apoyo*/
     --fs-xxxs: 0.75rem; /*Texto de apoyo 2*/
     --fs-xxxxs: 0.5rem; /*Label*/
-}
-
-/* Globals*/
-html{
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-body{
-    font-size: 1.6rem;
-    font-family: var(--main-font);
-    margin: 0 0;
 }

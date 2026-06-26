@@ -44,7 +44,7 @@ export default function StatusSwitch({
     // Clases de tamaño del contenedor del switch
     const sizes = {
         sm: "h-5 w-9",
-        md: "h-5 w-5",
+        md: "h-6 w-11",
         lg: "h-7 w-14",
     };
 
@@ -72,7 +72,7 @@ export default function StatusSwitch({
                 ${sizes[size]}
 
                 // Color dependiendo del estado
-                ${isActive ? "bg-gren-500" : "bg-gray-300"}
+                ${isActive ? "bg-green-500" : "bg-gray-300"}
 
                 // Estilo cuando esta deshabilitado
                 ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}

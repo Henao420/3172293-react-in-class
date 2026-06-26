@@ -11,6 +11,7 @@ export default function Button({
         primary: "bg-brand text-text-inverse hover:bg-brand-hover",
         secondary: "border border-brand bg-brand-soft text-primary hover:bg-brand-soft-hover"
     };
+    
 
     const sizes = {
         sm: `
@@ -19,7 +20,7 @@ export default function Button({
             before:absolute before:content-['']
             before:-inset-y-[8px] before:-inset-x-[0px]
             `,
-        md: "h-10 px-4 before:absolute before:content-['']                  before:-inset-y-[4px] before:-inset-x-[0px] "
+        md: "h-10 px-4 before:absolute before:content-['']                  before:-inset-y-[4px] before:-inset-x-[0px]"
     }
     return(
         <button

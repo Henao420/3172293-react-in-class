@@ -33,10 +33,10 @@ export const IconButton = React.forwardRef(function IconButton(
     ref
 ) {
     const baseStyles = `
-        inline-flex items-center jutify-center
+        inline-flex items-center justify-center
         rounded-full
         transition-colors duration-200
-        focus:outline-none faocus-visible:ring-2 focus-visible:ring-offset-2
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
         disabled:opacity-50 disabled:pointer-events-none
     `;
 
