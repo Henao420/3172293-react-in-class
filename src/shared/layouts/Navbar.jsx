@@ -11,7 +11,6 @@ import {
 import logo from "@/assets/images/1-logo.png";
 import { Link } from "react-router-dom";
 
-
 export default function Navbar() {
   // Componente de búsqueda 😂
   const [search, setSearch] = useState("");

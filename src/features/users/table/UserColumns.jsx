@@ -41,7 +41,7 @@ export const UserColumns = [
 
   // Columna Estado (activo / inactivo)
   {
-    accessorKey: "isActive",
+    accessorKey: "is_active",
     header: "Estado",
 
 
@@ -70,7 +70,7 @@ export const UserColumns = [
       return (
         // Componente reutilizable para mostrar el switch
         <StatusSwitch
-          checked={user.isActive} // Estado actual del usuario
+          checked={user.is_active} // Estado actual del usuario
           onChange={handleChange}  // Función que maneja el cambio
         />
       );

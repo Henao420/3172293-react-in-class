@@ -105,7 +105,6 @@ export default function AuthLayout() {
                         />
 
                         <Checkbox/>
-
                     <Outlet />
                 </main>
             </div>

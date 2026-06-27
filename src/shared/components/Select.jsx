@@ -2,11 +2,11 @@
 
 export default function Select({
     label,
-    error,
-    htmlFor,
     name,
-    onChange,
     value,
+    error,
+    onChange,
+    htmlFor,
     options = [],
 }){
     return (
@@ -24,11 +24,12 @@ export default function Select({
                     {label}
                 </label>
             )}
+
             {/* Select */}
             <select
-                name={name}
-                onChange={onChange}
                 value={value}
+                onChange={onChange}
+                name={name}
                 id="htmlFor"
                 className="
                     w-80
@@ -44,15 +45,23 @@ export default function Select({
             >
                 <option value="">Seleccione una opcion</option>
 
-                {options.map((opt) => (
-                    <option key={opt.value} value={opt.value}>
-                        {opt.label}
+                {options.map((option) => (
+                    <option 
+                        key={option.value} 
+                        value={option.value}
+                    >
+                        {option.label}
                     </option>
                 ))}
+
             </select>
+
+            {/* Feedback */}
             {error && (
-                <p className="text-caption text-red-800 place-self-start mt-1">{error}</p>
+                <p className="text-caption text-red-800 place-self-start mt-1">
+                    {error}
+                </p>
             )}
         </div>
-    )
+    );
 }
